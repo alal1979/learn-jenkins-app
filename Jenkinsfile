@@ -27,7 +27,14 @@ pipeline {
 
     stage('Test'){
       steps  {
-        echo 'Test stage'
+        sh '''
+          if [-f "/build/index.html"  ]; then 
+            echo "파일 존재 "
+          else 
+            echo "파일 없음 "
+          fi
+
+        '''
       } 
     }
   }
