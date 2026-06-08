@@ -21,7 +21,12 @@ pipeline {
           npm test
           ls -la
         '''
-      }
+      } 
+   
+    }
+
+    stage('Test'){
+        echo 'Test stage'
     }
   }
 }
