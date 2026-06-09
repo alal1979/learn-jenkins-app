@@ -18,8 +18,7 @@ pipeline {
           npm test
           ls -la
         '''
-      } 
-   
+      }    
     }
 
     stage('Test'){
@@ -33,10 +32,6 @@ pipeline {
     } 
     
   }
-  post {
-        always {
-            junit 'test-results/junit.xml'
-        }
-  }
+  
 
 }
